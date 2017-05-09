@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+'use strict';
+const Program = require('../build/src/program').default;
+const program = new Program(process);
+program.start();
