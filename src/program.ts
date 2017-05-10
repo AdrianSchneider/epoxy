@@ -23,7 +23,8 @@ export default class Main {
       .option('-t --attempts [count]', 'Succeed after attempts')
       .parse(this.process.argv);
 
-    if (!program.proxy || !program.strategy) {
+
+    if (!program.proxyUrl || !program.strategy) {
       program.outputHelp();
       process.exit(1);
     }
