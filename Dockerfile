@@ -4,7 +4,7 @@ ADD package.json /app/package.json
 RUN cd /app && npm install
 ADD . /app
 WORKDIR /app
-RUN rm -fr build && mkdir -p build/{src,tests} && ./node_modules/.bin/tsc -p tsconfig.json
+RUN rm -fr build && bin/build && ./node_modules/.bin/tsc -p tsconfig.json
 
 EXPOSE 3000
 ENTRYPOINT ["bin/epoxy"]
