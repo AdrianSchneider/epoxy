@@ -5,7 +5,7 @@ epoxy is a tiny http proxy meant to help test idempotency of REST servers. You w
 ## Setup
 
 ```bash
-docker built -t epoxy .
+docker build -t epoxy .
 
 # requests will fail 3 times before hitting localhost:4000
 docker run -it epoxy -p http://localhost:4000 -s attempts -t 3
